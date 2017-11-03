@@ -309,6 +309,7 @@ try:
         GAMEPAD = 80
         MCU = 100
         SERIAL = 110
+        SERIALDUMMY = 110
         PSTBOX = 111
         ANALOGINPUT = 120
         EXPERIMENT = 150
