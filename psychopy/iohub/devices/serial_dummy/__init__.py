@@ -57,7 +57,7 @@ class SerialDummy(Serial):
         if self.worker and self._serial:
             self.worker.terminate()
             self.worker = None
-            self._serial = False
+            self._serial = None
             print2err('serial closed')
             return True
         return False
@@ -68,7 +68,7 @@ class SerialDummy(Serial):
                 msg = input_buffer.get()
                 if msg != "STREAM":
                     output_buffer.put(
-                        b'found input: {}'.format(msg)
+                        b'{}'.format(msg)
                     )
             time.sleep(.01)
 
